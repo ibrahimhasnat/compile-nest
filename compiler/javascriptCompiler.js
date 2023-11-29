@@ -41,7 +41,7 @@ const compileAndRunJavaScript = (code, input) => {
         reject(new Error(`Process exited with code ${code}: ${error}`))
       }
 
-      // Clean up: remove the remporary file.
+      // Clean up: remove the temporary file.
       fs.unlink(fileName, (unlinkError) => {
         if (unlinkError) {
           console.log(`Error deleting file: ${unlinkError.message}`)
